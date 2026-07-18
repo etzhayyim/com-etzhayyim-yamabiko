@@ -1,0 +1,6 @@
+{:migration/id :yamabiko/standalone-cutover :status :complete
+ :source/root "20-actors/yamabiko"
+ :target/repository "orgs/etzhayyim/com-etzhayyim-yamabiko"
+ :canonical/format :edn :wire/root "wire" :pruned #{:go :tinygo :shell :python}
+ :root/cleanup ["20-actors/yamabiko"
+                "00-contracts/lexicons/com/etzhayyim/yamabiko"]}

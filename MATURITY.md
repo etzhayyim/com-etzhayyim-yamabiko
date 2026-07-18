@@ -8,7 +8,7 @@ electrification, no ads / no face recognition, ≤320 km/h + ≤GoA-3, EoL ≥90
 |---|---|
 | Lexicons | ✅ 9 under `com.etzhayyim.yamabiko.*` (carbody/bogie/interior/tractionElectrical/finalAssembly/dynamicTest/acousticEmissions/homologation/silenRailReview) — rich const ledger |
 | Cells | ✅ 9 path-reserved; homologation_binder now parses (syntax bug fixed, below) |
-| Manifest | ✅ `manifest.jsonld` — `constitutionalGates` (G1–G14) machine-readable |
+| Manifest | ✅ `wire/manifest.jsonld` — `constitutionalGates` (G1–G14) machine-readable |
 | Tests | ✅ **3 suites green** — `methods/test_charter_gates.cljc` (**7**, added 2026-06-17) + homologation_binder parse smoke + `py/test_agent.py`; `./run_tests.sh` aggregates all |
 | Methods | 🟡 cells R0 (`.solve()` Council-gated); offline engine = R1 |
 

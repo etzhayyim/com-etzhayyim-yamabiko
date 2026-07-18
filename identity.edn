@@ -1,0 +1,3 @@
+{:repository/id "com-etzhayyim-yamabiko" :actor/id "yamabiko"
+ :layout :west-flat-multirepo :canonical-format :edn
+ :wire-formats #{:json :json-ld :bpmn}}

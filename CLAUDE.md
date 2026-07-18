@@ -1,4 +1,4 @@
-# 20-actors/yamabiko — CLAUDE.md
+# . — CLAUDE.md
 
 ## Identity
 
@@ -89,14 +89,14 @@ The legacy Python agent twin (`py/agent.py` + `py/test_agent.py`) was pruned onc
 port reached parity.
 
 ```bash
-cd 20-actors/yamabiko
+cd .
 ./run_tests.sh           # all cljc suites green (9 cell state machines + agent + charter-gates)
 ```
 
 ## Related Files
 
-- `/20-actors/yamabiko/manifest.jsonld`
+- `/./manifest.jsonld`
 - `/90-docs/adr/2605252600-yamabiko-high-speed-rail-manufacturing-r0.md`
 - `/20-actors/sarutahiko/README.md` — Road sibling
-- `/20-actors/wadachi/README.md` — Road operator
+- `/orgs/etzhayyim/com-etzhayyim-wadachi/README.md` — Road operator
 - `/CLAUDE.md` — Religious-corp status table row 56

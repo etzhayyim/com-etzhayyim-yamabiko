@@ -3,12 +3,9 @@
   (:require [clojure.test :refer [deftest is run-tests]]
             [cheshire.core :as json]))
 
-(def ^:private here (.getParentFile (java.io.File. ^String *file*)))
-(def ^:private actor-dir (.getParentFile here))
-(def ^:private actor-name (.getName actor-dir))
-(def ^:private root (.. actor-dir getParentFile getParentFile))
-(def ^:private lexdir (java.io.File. root (str "00-contracts/lexicons/com/etzhayyim/" actor-name)))
-(defn- manifest [] (json/parse-string (slurp (java.io.File. actor-dir "manifest.jsonld"))))
+(def ^:private actor-dir (java.io.File. "."))
+(def ^:private lexdir (java.io.File. actor-dir "wire/lexicons"))
+(defn- manifest [] (:actor/manifest (clojure.edn/read-string (slurp (java.io.File. actor-dir "manifest.edn")))))
 (defn- lex [name] (json/parse-string (slurp (java.io.File. lexdir (str name ".json")))))
 
 (def ^:private PROPULSION
