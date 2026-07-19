@@ -1,0 +1,41 @@
+{
+  "lexicon" : 1,
+  "id" : "com.etzhayyim.yamabiko.trainsetManufactureRecord",
+  "description" : "Terminal trainset manufacturing aggregate emitted by homologation_binder and anchored to the open trainset registry.",
+  "defs" : {
+    "main" : {
+      "type" : "record",
+      "key" : "tid",
+      "record" : {
+        "type" : "object",
+        "required" : [ "tid", "trainsetDid", "carCount", "maxSpeed", "homologationStatus", "attestations" ],
+        "properties" : {
+          "tid" : {
+            "type" : "string",
+            "description" : "Transaction ID"
+          },
+          "trainsetDid" : {
+            "type" : "string",
+            "description" : "Trainset-level DID anchor (kotoba-datomic reference)"
+          },
+          "carCount" : {
+            "type" : "string",
+            "description" : "Number of cars (8-16 per Wave 1)"
+          },
+          "maxSpeed" : {
+            "type" : "string",
+            "description" : "Maximum certified speed (at most 320 km/h per G12)"
+          },
+          "homologationStatus" : {
+            "type" : "string",
+            "description" : "Homologation result and date"
+          },
+          "attestations" : {
+            "type" : "string",
+            "description" : "Aggregate references for all component, test, acoustic, homologation, and review attestations"
+          }
+        }
+      }
+    }
+  }
+}

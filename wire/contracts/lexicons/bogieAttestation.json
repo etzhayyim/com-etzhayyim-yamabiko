@@ -1,0 +1,57 @@
+{
+  "lexicon" : 1,
+  "id" : "com.etzhayyim.yamabiko.bogieAttestation",
+  "description" : "Bogie assembly attestation (L2). Cast steel frame + wheel set + traction motor + brake + air spring. R3+ frame sourced from igata Wave 2. Per ADR-2605252600 L2.",
+  "defs" : {
+    "main" : {
+      "type" : "record",
+      "record" : {
+        "type" : "object",
+        "properties" : {
+          "brakeSystem" : {
+            "type" : "unknown"
+          },
+          "attestingRobots" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            },
+            "minItems" : 2
+          },
+          "bogieIndex" : {
+            "type" : "integer"
+          },
+          "airSpring" : {
+            "type" : "unknown"
+          },
+          "frameLot" : {
+            "type" : "unknown"
+          },
+          "trainsetId" : {
+            "type" : "string"
+          },
+          "wheelSetLot" : {
+            "type" : "unknown"
+          },
+          "recordedAt" : {
+            "type" : "string",
+            "format" : "datetime"
+          },
+          "motorLot" : {
+            "type" : "object",
+            "properties" : {
+              "type" : {
+                "type" : "string",
+                "knownValues" : [ "PMSM", "IM" ]
+              },
+              "powerKw" : {
+                "type" : "integer"
+              }
+            }
+          }
+        },
+        "required" : [ "trainsetId", "bogieIndex", "motorLot", "attestingRobots" ]
+      }
+    }
+  }
+}
