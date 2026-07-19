@@ -4,7 +4,7 @@
             [cheshire.core :as json]))
 
 (def ^:private actor-dir (java.io.File. "."))
-(def ^:private lexdir (java.io.File. actor-dir "wire/lexicons"))
+(def ^:private lexdir (java.io.File. actor-dir "wire/contracts/lexicons"))
 (defn- manifest [] (:actor/manifest (clojure.edn/read-string (slurp (java.io.File. actor-dir "manifest.edn")))))
 (defn- lex [name] (json/parse-string (slurp (java.io.File. lexdir (str name ".json")))))
 
